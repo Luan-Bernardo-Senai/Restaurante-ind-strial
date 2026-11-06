@@ -1,0 +1,191 @@
+@media (max-width: 500px) {
+    body {
+      margin: 24px 16px;
+      padding: 24px;
+    }
+  }
+/*forma de tela da retirada de lanches*/
+  .corpo_s {
+    max-width: 460px;
+    margin: 60px auto;
+    padding: 32px;
+  
+    background-color: #D2DDED;
+    color: #3d3075;
+  
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  
+    border-top: 6px solid #0d53b4;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+/*titulo da retirada dos lanches*/
+  .titulo_p {
+    text-align: center;
+    background-color:#444cc5;
+    color: rgb(187, 187, 235);
+    border-radius: 10px;
+  }
+  /* configurcao da imagem do navegador*/
+  nav img {
+    height: 100px;
+    width: 125px;
+    margin: 2x;
+    border-radius: 6px;
+    padding:1px;
+}
+/*cor do fundo branco para simular o app*/
+html{
+    background-color: #edf3f8;;
+}
+
+/*ajusta o formulario de matricula*/
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    margin-top: 5px;
+
+  }
+
+  /*botao de retirada do lanche*/
+  button {
+    color: white;
+    background: linear-gradient(to bottom, rgb(91, 89, 230) , rgb(62, 60, 184) , rgb(66, 48, 148));
+    margin-top:6px;
+    border-radius: 12;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+  
+    border: none;
+    border-radius: 6px;
+  
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  /* muda a cor ao passar o mouse */
+  button:hover {
+    background-color: #0e408b;
+    background: linear-gradient(to bottom, rgb(54, 52, 199) , rgb(44, 42, 165) , rgb(65, 46, 150));
+    color: rgb(232, 230, 255);
+  }
+
+  /*configuracao dos textos que ficarao acima do campo de entrada*/
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  /*aparencia do campo de entrada */
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #8685ad;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    border-color: #1457b8;
+    outline: 2px solid #1457b8;
+    outline-offset: 2px;
+  }
+
+  /*configuracao do botao de saida*/
+   .bloco_decora {
+    background-color: #9ca7ce;
+    border-radius:12px;
+    padding:8px;
+   }
+
+   .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.buttons a {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #454cb3;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.buttons a:hover {
+  background-color: #3e36aa;
+}
+
+   /*rodapé com os direitos autorais de retirada*/
+footer {
+  background-color: #243247;
+  background: linear-gradient(to left, rgb(52, 50, 187) , rgb(28, 26, 141) , rgb(34, 22, 87));
+  color: white;
+}
+/* ---------- QR Code do aluno e leitor da cantineira ---------- */
+
+/*fundo branco ao redor do QR Code, sem ele a leitura da câmera fica difícil*/
+#qrcode {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 16px auto;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+/*nome e matricula embaixo do QR Code*/
+#dadosAluno {
+  text-align: center;
+  font-weight: bold;
+}
+
+/*mensagem de resultado: verde libera, vermelho nega*/
+#mensagem:not(:empty) {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+#mensagem.ok {
+  background-color: #d4f1db;
+  color: #1b6b2c;
+  border: 2px solid #1b6b2c;
+}
+
+#mensagem.erro {
+  background-color: #f6d9d9;
+  color: #A52A2A;
+  border: 2px solid #A52A2A;
+}
+
+/*area da câmera não pode passar da tela*/
+#leitor {
+  width: 100%;
+  max-width: 100%;
+}
+
+/*lista de retiradas de hoje*/
+#historico {
+  padding-left: 20px;
+}
+
+/*botao menos chamativo para ações de teste*/
+.botao-secundario {
+  background: #8685ad;
+}
+.botao-secundario:hover {
+  background: #6d6c96;
+}
+
+/*campo de matricula não pode passar da largura do cartão*/
+#manual input {
+  box-sizing: border-box;
+}
