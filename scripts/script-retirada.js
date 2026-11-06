@@ -24,7 +24,8 @@ function carregarRetiradas() { //Lê as retiradas salvas. Se não tiver nada sal
         if (Array.isArray(salvo)) {
             return salvo;
         }
-    } catch (erro) {
+    }
+    catch (erro) {
         //Se o navegador bloquear o localStorage ou o conteúdo estiver quebrado, cai na lista de exemplo
     }
 
@@ -34,7 +35,8 @@ function carregarRetiradas() { //Lê as retiradas salvas. Se não tiver nada sal
 function salvarRetiradas() { //Guarda a lista no navegador, assim ela não some quando a página é recarregada
     try {
         localStorage.setItem(CHAVE_RETIRADAS, JSON.stringify(retiradas));
-    } catch (erro) {
+    }
+    catch (erro) {
         //Sem localStorage o sistema continua funcionando, só não lembra das retiradas depois de recarregar
     }
 }
@@ -59,9 +61,11 @@ function horarioTurno() { //Pega a hora, o dia, o mes, e o ano, e transforma num
 
     if (hora >= 6 && hora < 12) { //Verifica o turno atual
         turno = "manha";
-    } else if (hora >= 12 && hora < 18) {
+    }
+    else if (hora >= 12 && hora < 18) {
         turno = "tarde";
-    } else {
+    }
+    else {
         turno = "noite";
     }
 
@@ -134,7 +138,8 @@ function mostrarResultado(resultado) { //Pinta a mensagem de verde (liberado) ou
 
     if (resultado.aluno) {
         dadosAluno.textContent = resultado.aluno.nome + " - Matrícula: " + resultado.aluno.matricula;
-    } else {
+    }
+    else {
         dadosAluno.textContent = "";
     }
 }
@@ -173,7 +178,8 @@ let configuracoes = {
 async function pararLeitor() { //Desliga a câmera sem dar erro se ela já estiver desligada
     try {
         await leitor.stop();
-    } catch (erro) {
+    }
+    catch (erro) {
         //Já estava parada
     }
 }
@@ -202,7 +208,8 @@ async function iniciarLeitor() { //Liga a câmera e fica esperando um QR Code
             configuracoes,
             quandoEncontrar
         );
-    } catch (erro) {
+    }
+    catch (erro) {
         mensagem.textContent = "Não foi possível abrir a câmera. Digite a matrícula abaixo.";
         mensagem.className = "erro";
         botaoProximo.textContent = "Tentar abrir a câmera de novo";
